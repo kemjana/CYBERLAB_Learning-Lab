@@ -7,6 +7,7 @@
 **Source code:** https://github.com/kemjana/CYBERLAB_Learning-Lab
 <img width="1917" height="927" alt="image" src="https://github.com/user-attachments/assets/55878df7-1ebe-44cc-a812-3ded6344f6e8" />
 <img width="1917" height="926" alt="image" src="https://github.com/user-attachments/assets/54df14db-5838-48c4-ae1d-365750fea036" />
+<img width="1917" height="923" alt="image" src="https://github.com/user-attachments/assets/0d5d2548-faaf-447b-ac45-db2812fc2f05" />
 
 ## Purpose
 
