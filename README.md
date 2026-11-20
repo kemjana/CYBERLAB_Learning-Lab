@@ -61,3 +61,36 @@ Paid hosting and database plans, user accounts with server-side score sessions, 
    git clone [https://github.com/kemjana/CYBERLAB_Learning-Lab.git](https://github.com/kemjana/CYBERLAB_Learning-Lab.git)
    cd CYBERLAB_Learning-Lab
    npm install
+3. Copy `.env.example` to `.env.local` (`copy .env.example .env.local` on Windows or `cp .env.example .env.local` on Mac/Linux) and fill it in with no spaces around `=` and no quotes around values:
+   * `GEMINI_API_KEY` *(Required)*: Free key from Google AI Studio
+   * `TOKEN_SECRET` *(Required)*: Any long random sentence used to encrypt the phishing answer keys
+   * `GEMINI_MODEL` *(Optional)*: Gemini model name
+   * `SUPABASE_URL` *(Optional)*: Your project URL, like `https://PROJECT-ID.supabase.co`
+   * `SUPABASE_SERVICE_KEY` *(Optional)*: Your Supabase secret (or `service_role`) key (server only, never share it)
+   * `CTF_FLAG_1`, `CTF_FLAG_2`, `CTF_FLAG_3` *(Optional)*: Custom CTF flags
+4. *(Optional)* Set up the leaderboard database: create a free project at Supabase, open SQL Editor, paste the contents of `supabase/schema.sql`, and click **Run**.
+5. Start the app: `npm run dev`
+6. Open `http://localhost:3000`. If you edit `.env.local` later, stop the server (`Ctrl+C`) and start it again.
+
+### Deploy to Vercel
+
+1. Push the project to GitHub (never commit `.env.local`).
+2. In Vercel, choose **Add New > Project** and import the repository.
+3. Add the same environment variables in **Environment Variables** and click **Deploy**.
+
+## Stack
+
+Next.js (App Router), React, TypeScript, Node.js, plain CSS, Google Gemini API (`@google/genai`), Supabase (PostgreSQL), Vercel.
+
+## Project structure
+
+```text
+app/          pages (password, phishing, coach, ctf, leaderboard) and API routes
+components/   header and player/score tracking
+lib/          Gemini calls, phishing logic, CTF levels, password scoring,
+              score storage, encryption, rate limiting
+supabase/     database schema
+
+```
+
+*Disclaimer: For education only. All emails, companies, and links in the app are fictional. Never type a real password into any practice tool. Built with the help of AI assistants (Claude and GitHub Copilot).*
